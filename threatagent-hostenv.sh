@@ -11,4 +11,4 @@ printenv | grep 'CIRCLE_' >> host.env
 # GitLab
 printenv | grep 'CI_' >> host.env
 
-#cat host.env
+cat host.env

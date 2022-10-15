@@ -1,5 +1,6 @@
 # get host environment variable to file
-printenv > host.env
+printenv | grep CODEBUILD host.env >> host.env
+printenv | grep CODEBUILD host.env >> host.env
 
 # add prefix to protect docker environment variables from being overwritten by host variables
 sed -i 's/^/HOST_/' host.env

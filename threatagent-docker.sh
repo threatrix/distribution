@@ -1,5 +1,14 @@
 # get host environment variable to file
-printenv > host.env
+# AWS CodeBuild
+printenv | grep CODEBUILD >> host.env
+# Bitnucket
+printenv | grep BITBUCKET >> host.env
+# Azure
+printenv | grep 'BUILD_SOURCEBRANCH\|SYSTEM_TEAMPROJECT\|SYSTEM_COLLECTIONURI' >> host.env
+# CircleCI
+printenv | grep 'CIRCLE_' >> host.env
+# GitLab
+printenv | grep 'CI_' >> host.env
 
 # add prefix to protect docker environment variables from being overwritten by host variables
 sed -i 's/^/HOST_/' host.env

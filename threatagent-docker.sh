@@ -7,7 +7,7 @@ sed -i 's/^/HOST_/' host.env
 cat host.env
 
 # run docker image
-docker run --env-file=host.env --name threatrix-threat-agent -v $(pwd):/app threatrix/threat-agent 
+docker run --env-file=host.env --name threatrix-threat-agent -v $(pwd):/app threatrix/threat-agent ./
 
 # deleting the temporary file
 rm host.env

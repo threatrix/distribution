@@ -2,7 +2,7 @@
 printenv | grep 'THREATRIX_' >> host.env
 # AWS CodeBuild
 printenv | grep CODEBUILD >> host.env
-# Bitnucket
+# Bitbucket
 printenv | grep BITBUCKET >> host.env
 # Azure
 printenv | grep 'BUILD_SOURCEBRANCH\|SYSTEM_TEAMPROJECT\|SYSTEM_COLLECTIONURI' >> host.env

@@ -2,7 +2,7 @@ if [ -f "Gemfile" ]; then
         echo "Installing CycloneDX for Ruby Gems.."
         if ! command -v gem &> /dev/null
         then
-                echo "[error] rubygems not installed. Please install ruby-full and rubygems and try again."
+                echo "[warning] rubygems may not be installed."
                 #exit
         fi
         gem install cyclonedx-ruby
@@ -11,7 +11,7 @@ if [ -f "mix.exs" ]; then
         echo "Installing CycloneDX for Mix.."
         if ! command -v mix &> /dev/null
         then
-                echo "[error] mix not installed. Please install mix and try again."
+                echo "[warning] mix may not be installed."
                 #exit
         fi
         mix archive.install hex sbom --force

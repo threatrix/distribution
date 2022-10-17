@@ -6,7 +6,6 @@ if [ -f "Gemfile" ]; then
                 exit
         fi
         gem install cyclonedx-ruby
-
 fi
 if [ -f "mix.exs" ]; then
         echo "Installing CycloneDX for Mix.."

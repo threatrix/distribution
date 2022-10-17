@@ -3,7 +3,7 @@ if [ -f "Gemfile" ]; then
         if ! command -v gem &> /dev/null
         then
                 echo "[error] rubygems not installed. Please install ruby-full and rubygems and try again."
-                exit
+                #exit
         fi
         gem install cyclonedx-ruby
 fi
@@ -12,7 +12,7 @@ if [ -f "mix.exs" ]; then
         if ! command -v mix &> /dev/null
         then
                 echo "[error] mix not installed. Please install mix and try again."
-                exit
+                #exit
         fi
         mix archive.install hex sbom --force
 fi

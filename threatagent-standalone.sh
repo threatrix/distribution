@@ -17,4 +17,4 @@ if [ -f "mix.exs" ]; then
         mix archive.install hex sbom --force
 fi
 echo "Downloading Threatrix Threat Agent.."
-curl -L https://github.com/threatrix/threat-matrix/releases/download/v1.2.9-RELEASE/threat-agent-1.2.9.6.jar -o threat-agent.jar
+curl -SsL https://github.com/threatrix/threat-matrix/releases/download/v1.2.9-RELEASE/threat-agent-1.2.9.6.jar -o threat-agent.jar

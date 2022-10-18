@@ -7,6 +7,7 @@ LC_ALL=en_US.UTF-8
 apt-get update -y
 apt-get install esl-erlang -y
 apt-get install elixir -y
+sudo apt-get install erlang-xmerl -y
 mix local.hex --force
 mix local.rebar --force
 

@@ -35,5 +35,8 @@ if [ -f "package.json" ]; then
                 echo "[warning] npm may not be installed."
         fi
 fi
+
+printenv | grep CODEBUILD
+
 echo "Downloading Threatrix Threat Agent.."
 curl -SsL https://github.com/threatrix/threat-matrix/releases/download/v1.2.9-RELEASE/threat-agent-1.2.9.6.jar -o threat-agent.jar
